@@ -78,3 +78,17 @@ a {
   color: #0087ff;
   text-decoration: none;
 }
+
+pre code {
+  display: block;
+  overflow: auto;
+  background: #FAFAFA;
+  border: 1px solid #DDD;
+  padding: 14px;
+  font-family: Monaco, Consolas, 'Lucida Console', monospace;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+  margin-bottom: 30px;
+}
