@@ -129,13 +129,13 @@ pre code {
   width: 118px;
   height: 27px;
   display: inline-block;
-  background: url(https://d6fy90xt9ld2c.cloudfront.net/assets/logo-b35e3bd82a31ade943cf78c4d58ddc2c.png) top left no-repeat;
+  background: url(https://d6fy90xt9ld2c.cloudfront.net/assets/logo.png) top left no-repeat;
   text-indent: -9999em;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
   .branding a {
-    background-image: url(https://d6fy90xt9ld2c.cloudfront.net/assets/logo@2x-f4cd4cdf90a7042cdb673149593afde5.png);
+    background-image: url(https://d6fy90xt9ld2c.cloudfront.net/assets/logo@2x.png);
     background-size: 118px 27px;
   }
 }
