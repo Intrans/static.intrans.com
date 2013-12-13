@@ -92,3 +92,16 @@ pre code {
   line-height: 15px;
   margin-bottom: 30px;
 }
+
+.inapp {
+  background: #eaeef2;
+}
+
+.inapp p, .inapp li {
+  color: #7a8fa5;
+}
+
+.inapp h1, .inapp h2, .inapp h3, .inapp h4, .inapp h5, .inapp h6, .inapp strong {
+  color: #31587d;
+  font-weight: 200;
+}
