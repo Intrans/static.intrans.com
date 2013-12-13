@@ -1,10 +1,10 @@
-.wufoo label {
-
+.wufoo label.desc, .wufoo legend.desc {
+  font: 400 12px/1.4 "Helvetica Neue", Helvetica, Arial;
+  margin: 0 0 3px;
+  color: #8E9FB1;
 }
 
 .wufoo li.focused label.desc, .wufoo li.focused legend.desc, .wufoo li.focused div, .wufoo li.focused span, .wufoo li.focused div label, .wufoo li.focused span label, .safari .wufoo li.focused input.file {
-  font: 400 12px/1.4 "Helvetica Neue", Helvetica, Arial;
-  margin: 0 0 3px;
   color: #8E9FB1;
 }
 
