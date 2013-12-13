@@ -21,6 +21,20 @@
 
 <link href="static.css" media="screen" rel="stylesheet" type="text/css">
 
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  function getQuerystring(key, default_)
+  {
+    if (default_==null) default_="";
+    key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+    var qs = regex.exec(window.location.href);
+    if(qs == null)
+      return default_;
+    else
+      return qs[1];
+  }
+</script>
 </head>
 
 <body class="onboard">
@@ -41,7 +55,7 @@
     'async':true,
     'host':'wufoo.com',
     'header':'show',
-    'defaultValues':'field3=123456',
+    'defaultValues':'field3=' + getQuerystring('mc',''),
     'ssl':false};
     s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
     s.onload = s.onreadystatechange = function() {
@@ -51,6 +65,5 @@
     })(document, 'script');</script>
 
   </div>
-
 </body>
 </html>
