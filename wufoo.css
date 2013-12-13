@@ -58,8 +58,8 @@ label {
   display: inline-block;
   text-align: center;
   border: none;
-  padding: 1px 18px 0;
-  font: 600 14px/32px "Helvetica Neue", Helvetica, Arial;
+  padding: 1px 20px 0;
+  font: 300 14px/32px "Helvetica Neue", Helvetica, Arial;
   text-transform: uppercase;
   color: #FFF;
   background: #A0B9CC;
