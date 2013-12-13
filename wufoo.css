@@ -1,11 +1,11 @@
 .wufoo label.desc, .wufoo legend.desc {
-  font: 400 12px/1.4 "Helvetica Neue", Helvetica, Arial;
+  font: 500 11px/1.4 "Helvetica Neue", Helvetica, Arial;
   margin: 0 0 3px;
   color: #8E9FB1;
 }
 
 .wufoo li.focused label.desc, .wufoo li.focused legend.desc, .wufoo li.focused div, .wufoo li.focused span, .wufoo li.focused div label, .wufoo li.focused span label, .safari .wufoo li.focused input.file {
-  color: #8E9FB1;
+  color: #7389A0;
 }
 
 .wufoo input.text {
@@ -62,9 +62,8 @@
   display: inline-block;
   text-align: center;
   border: none;
-  padding: 1px 20px 0;
+  padding: 0 20px;
   font: 300 14px/32px "Helvetica Neue", Helvetica, Arial;
-  text-transform: uppercase;
   color: #FFF;
   background: #A0B9CC;
   border: none;
