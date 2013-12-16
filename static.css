@@ -113,21 +113,26 @@ pre code {
 }
 
 .onboard-header {
-  padding: 0 10px;
+  padding: 0 7px;
 }
 
 .onboard-header h2 {
   color: #31587d;
-  font-size: 26px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 22px;
   margin-top: 15px;
 }
 
-.onboard-header h3 {
+.onboard-header p {
   color: #536067;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 18px;
+}
+
+.onboard-header p a {
+  color: #0087ff;
+  text-decoration: none;
 }
 
 .topbar {
