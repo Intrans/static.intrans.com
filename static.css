@@ -112,6 +112,21 @@ pre code {
   background: #eaeef2;
 }
 
+.onboard-header {
+  padding: 0 20px;
+}
+
+.onboard-header h2 {
+  color: #31587d;
+  font-size: 26px;
+}
+
+.onboard-header h3 {
+  color: #536067;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 .topbar {
   width: 100%;
   display: block;
