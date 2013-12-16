@@ -113,7 +113,7 @@ pre code {
 }
 
 .onboard-header {
-  padding: 0 7px;
+  padding: 0 1%;
 }
 
 .onboard-header h2 {
@@ -125,7 +125,7 @@ pre code {
 
 .onboard-header p {
   color: #536067;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   line-height: 18px;
 }
