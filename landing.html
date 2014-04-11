@@ -45,15 +45,17 @@
 
     Keen.addEvent("viewer", viewer);
 
-    if( /Android/i.test(navigator.userAgent) ) {
-      window.location.replace("https://intrans.com/");
-    }else if( /iPhone/i.test(navigator.userAgent) ) {
-      window.location.replace("https://intrans.com/iphone");
-    }else if( /webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      window.location.replace("https://intrans.com/tour");
-    }else{
-      window.location.replace("https://intrans.com/features");
-    }
+    setTimeout(function(){
+      if( /Android/i.test(navigator.userAgent) ) {
+        window.location.replace("https://intrans.com/");
+      }else if( /iPhone/i.test(navigator.userAgent) ) {
+        window.location.replace("https://intrans.com/iphone");
+      }else if( /webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        window.location.replace("https://intrans.com/tour");
+      }else{
+        window.location.replace("https://intrans.com/features");
+      }
+    },1000);
   });
 </script>
 </head>
