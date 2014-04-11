@@ -15,12 +15,12 @@
 <script type="text/javascript" charset="utf-8">
   if( /Android/i.test(navigator.userAgent) ) {
     window.location.replace("https://intrans.com/");
-  }
-  if( /iPhone/i.test(navigator.userAgent) ) {
+  }else if( /iPhone/i.test(navigator.userAgent) ) {
     window.location.replace("https://intrans.com/iphone");
-  }
-  if( /webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    window.location.replace("https://intrans.com/shippers");
+  }else if( /webOS|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    window.location.replace("https://intrans.com/tour");
+  }else{
+    window.location.replace("https://intrans.com/features");
   }
 </script>
 </head>
