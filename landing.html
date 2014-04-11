@@ -20,30 +20,36 @@
     readKey: "64f6acc75a6783121ee50d7002905504675050ab14d8eaba9fdd1e1e237f5b040f4c2572435a4b62d15629a294181b88ae97458bdad6186dabae42960c8d2f87d164a844f55aebb4cdc7f100515d4dc05703df00079a430bc936c5ae0ec9c185db95f777918bbe141ba26348d0e5b4dd"    // required for doing analysis
   });
 
-  function getUrlVars(){
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-  }
+  var location;
+  var urlParams;
+  (window.onpopstate = function () {
+      var match,
+          pl     = /\+/g,
+          search = /([^&=]+)=?([^&]*)/g,
+          decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+          query  = window.location.search.substring(1);
+
+      urlParams = {};
+      while (match = search.exec(query))
+         urlParams[decode(match[1])] = decode(match[2]);
+  })();
 
   var trackViewer = function () {
     var query = getUrlVars()
-    var location = $.ajax("http://api.hostip.info/get_json.php");
+
     var viewer = {
       device: navigator.userAgent,
-      query: query,
+      query: urlParams,
       location: location
     };
 
     Keen.addEvent("viewer", viewer);
   };
 
-  trackViewer();
+  $.ajax("http://api.hostip.info/get_json.php").done(function(data) {
+    location = data;
+    trackViewer();
+  });
 
   // if( /Android/i.test(navigator.userAgent) ) {
   //   window.location.replace("https://intrans.com/");
