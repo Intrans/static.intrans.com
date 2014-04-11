@@ -13,6 +13,27 @@
 <title>Intrans — Mobile Freight Tracking</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript">
+  var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+  Keen.configure({
+    projectId: "534821da00111c1f41000026",
+    writeKey: "62fb69ba857d375a52da70e8b03dd4e9de026677639790f5434247de6c251fd61bf2308478e45aed392fabbc2526aad3ebf63b1ba16fbf995148683fbb6e203093c5dd10648e72dc9ea03b5f08fa83b46249f229ca55046eb12900476dd2f84adc3ea226b2825ce974a1024483b97b18", // required for sending events
+    readKey: "64f6acc75a6783121ee50d7002905504675050ab14d8eaba9fdd1e1e237f5b040f4c2572435a4b62d15629a294181b88ae97458bdad6186dabae42960c8d2f87d164a844f55aebb4cdc7f100515d4dc05703df00079a430bc936c5ae0ec9c185db95f777918bbe141ba26348d0e5b4dd"    // required for doing analysis
+  });
+
+  var location;
+  var urlParams;
+  (window.onpopstate = function () {
+      var match,
+          pl     = /\+/g,
+          search = /([^&=]+)=?([^&]*)/g,
+          decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+          query  = window.location.search.substring(1);
+
+      urlParams = {};
+      while (match = search.exec(query))
+         urlParams[decode(match[1])] = decode(match[2]);
+  })();
+
 
   // if( /Android/i.test(navigator.userAgent) ) {
   //   window.location.replace("https://intrans.com/");
