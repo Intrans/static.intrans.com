@@ -34,6 +34,17 @@
          urlParams[decode(match[1])] = decode(match[2]);
   })();
 
+  $.ajax("http://api.hostip.info/get_json.php").done(function(data) {
+    console.log(data);
+
+    var viewer = {
+      device: navigator.userAgent,
+      query: urlParams,
+      location: data
+    };
+
+    Keen.addEvent("viewer", viewer);
+  });
 
   // if( /Android/i.test(navigator.userAgent) ) {
   //   window.location.replace("https://intrans.com/");
